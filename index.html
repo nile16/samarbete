@@ -28,12 +28,45 @@
 <script>
 
 $.getJSON("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?", {
-    num: 20,
+    num: 5,
     q: "http://www.svd.se/?service=rss",
 	format: "json"
 }).done(function (data) {
 	$.each(data.responseData.feed.entries, function( i, news ) {
-	document.getElementById('output').innerHTML += "<a href='"+news.link+"'>"+news.title+"</a><br>";
+	document.getElementById('output').innerHTML += "SVD: <a href='"+news.link+"'>"+news.title+"</a><br>";
+	})
+});
+
+$.getJSON("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?", {
+    num: 5,
+    q: "http://expressen.se/rss/nyheter",
+	format: "json"
+}).done(function (data) {
+	console.log(data);
+	$.each(data.responseData.feed.entries, function( i, news ) {
+	document.getElementById('output').innerHTML += "Expressen: <a href='"+news.link+"'>"+news.title+"</a><br>";
+	})
+});
+
+$.getJSON("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?", {
+    num: 5,
+    q: "http://www.aftonbladet.se/rss.xml",
+	format: "json"
+}).done(function (data) {
+	console.log(data);
+	$.each(data.responseData.feed.entries, function( i, news ) {
+	document.getElementById('output').innerHTML += "Aftonbladet: <a href='"+news.link+"'>"+news.title+"</a><br>";
+	})
+});
+
+$.getJSON("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?", {
+    num: 5,
+    q: "http://www.svt.se/nyheter/rss.xml",
+	format: "json"
+}).done(function (data) {
+	console.log(data);
+	$.each(data.responseData.feed.entries, function( i, news ) {
+	document.getElementById('output').innerHTML += "SVT: <a href='"+news.link+"'>"+news.title+"</a><br>";
 	})
 });
 
