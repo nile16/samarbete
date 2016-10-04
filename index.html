@@ -4,27 +4,33 @@
 
 <head>
 	<meta charset='utf-8' />
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,  minimum-scale=1.0"> 
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,  minimum-scale=1.0">
 	<title>Samarbete</title>
+	<link href="style.css" type= "text/css" rel= "stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 <style>
 
 #wrapper {
-	position:absolute;
-	top:0; 
-	bottom:0; 
-	right:0; 
-	left:0; 
+	position: relative;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
 	overflow:hidden;
 }
-	
 
 </style>
 
 <body>
+  <nav class="navbar">
+   <a href="index.html">Nyheter i världen</a>
+   <a href="teknik.html">Nyheter inom teknik</a>
+   <a href="game.html">Nyheter för gamers</a>
+  </nav>
 
+<h1>Nyheter i världen</h1>
 <div id="wrapper">
 	<div id="output" ></div>
 </div>
@@ -46,4 +52,3 @@ $.getJSON("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?",
 </script>
 
 </html>
-

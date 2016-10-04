@@ -1,0 +1,30 @@
+html {
+  background-color: #cdc0b0;
+  background-size: cover;
+  }
+
+body {
+	margin: 10px auto;
+  padding: 10px;
+  width: 1200px;
+  height: auto;
+  background-color: #FBF1F1;
+  border-radius: 10px;
+  font-family: serif;
+  font-style: normal;
+}
+
+.navbar {
+  background-color:#FBF1F1;
+	width: 900px;
+	margin: auto;
+	text-align: center;
+	height: 30px;
+}
+
+.navbar a {
+  padding: 1em;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
