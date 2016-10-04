@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
 
 <head>
@@ -5,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,  minimum-scale=1.0">
 	<title>Samarbete</title>
 	<link href="style.css" type= "text/css" rel= "stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 <body>
@@ -15,6 +18,23 @@
   </nav>
 
 <h1>Nyheter inom teknik</h1>
+<div id="teknik">
+	<div id="output" ></div>
+</div>
+
 </body>
+
+<script>
+$.getJSON("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?", {
+    num: 5,
+    q: "http://www.sweclockers.com/feeds/nyheter",
+	format: "json"
+}).done(function (data) {
+	$.each(data.responseData.feed.entries, function( i, news ) {
+	document.getElementById('output').innerHTML += "Sweclockers: <a href='"+news.link+"'>"+news.title+"</a><br>";
+	})
+});
+
+</script>
 
 </html>

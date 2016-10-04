@@ -29,7 +29,7 @@
 
 $.getJSON("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?", {
     num: 5,
-    q: "http://www.svd.se/?service=rss",
+    q: "http://www.sweclockers.com/feeds/nyheter",
 	format: "json"
 }).done(function (data) {
 	$.each(data.responseData.feed.entries, function( i, news ) {
