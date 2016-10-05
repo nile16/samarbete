@@ -30,8 +30,16 @@ body {
  	right:0;
  	left:0;
  	overflow:hidden;
- }
 }
+
+#game {
+ 	position: relative;
+ 	top:0;
+ 	bottom:0;
+ 	right:0;
+ 	left:0;
+ 	overflow:hidden;
+ }
 
 .navbar {
   background-color:#FBF1F1;
@@ -75,6 +83,7 @@ body {
 
 h1 {
   font-size: 5vw;
+  text-align: right;
 }
 
 }
