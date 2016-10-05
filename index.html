@@ -11,22 +11,19 @@
 </head>
 
 <body>
-		<p id="time"></p>
 
-		<script>
-	var d = new Date();
-	document.getElementById("time").innerHTML = d.toDateString();
-	</script>
-	
-	<img src="Logomakr_2w8IXq.png" alt="Logo" style="width:838px;height:159px;">
+<p id="time"></p>
 
-  <nav class="navbar">
-   <a href="javascript:load(world);">Globala nyheter</a>
-   <a href="javascript:load(tech);">Nytt inom teknik</a>
-   <a href="javascript:load(game);">Gaming</a>
-  </nav>
+<img src="Logomakr_2w8IXq.png" alt="Logo" style="width:838px;height:159px;">
 
-<h1>Nyheter från hela världen</h1>
+<nav class="navbar">
+	<a href='javascript:load(world,"Nyheter från hela världen");'>Globala nyheter</a>
+	<a href='javascript:load(tech,"Nyheter inom teknik");'>Nytt inom teknik</a>
+	<a href='javascript:load(game,"Nyheter om gaming");'>Gaming</a>
+</nav>
+
+<h1 id="header"></h1>
+
 <div id="wrapper">
 	<div id="output" ></div>
 </div>
@@ -34,6 +31,10 @@
 </body>
 
 <script>
+
+var d = new Date();
+document.getElementById("time").innerHTML = d.toDateString();
+
 
 var world = [
 	["SVD"        ,"http://www.svd.se/?service=rss"],
@@ -54,7 +55,8 @@ var game  = [
 	["Gamespot"   ,"https://www.gamespot.com/feeds/news/"]
 ];
 
-function load(sources) {
+function load(sources,headline) {
+	document.getElementById('header').innerHTML = headline;
 	document.getElementById('output').innerHTML = "";
 	$.each(sources, function(i,s){
 		$.getJSON("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?", {
@@ -72,7 +74,7 @@ function load(sources) {
 	})
 }
 
-load(world);
+load(world,"Nyheter från hela världen");
 
 
 </script>
