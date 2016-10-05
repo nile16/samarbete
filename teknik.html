@@ -34,35 +34,27 @@ document.getElementById("time").innerHTML = d.toDateString();
 </body>
 
 <script>
-$.getJSON("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?", {
-    num: 5,
-    q: "http://www.sweclockers.com/feeds/nyheter",
-	format: "json"
-}).done(function (data) {
-	$.each(data.responseData.feed.entries, function( i, news ) {
-	document.getElementById('output').innerHTML += "Sweclockers: <a href='"+news.link+"'>"+news.title+"</a><br>";
-	})
-});
 
-$.getJSON("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?", {
-    num: 5,
-    q: "http://www.nyteknik.se/nt-rss.xml",
-	format: "json"
-}).done(function (data) {
-	$.each(data.responseData.feed.entries, function( i, news ) {
-	document.getElementById('output').innerHTML += "NyTeknik: <a href='"+news.link+"'>"+news.title+"</a><br>";
-	})
-});
+var sources = [
+	["Sweclockers","http://www.sweclockers.com/feeds/nyheter"],
+	["NyTeknik"   ,"http://www.nyteknik.se/nt-rss.xml"],
+	["Swedroid"   ,"http://www.swedroid.se/feed/"]
+	];
 
-$.getJSON("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?", {
-    num: 5,
-    q: "http://www.swedroid.se/feed/",
-	format: "json"
-}).done(function (data) {
-	$.each(data.responseData.feed.entries, function( i, news ) {
-	document.getElementById('output').innerHTML += "Swedroid: <a href='"+news.link+"'>"+news.title+"</a><br>";
-	})
-});
+$.each(sources, function(i,s){
+	$.getJSON("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?", {
+		num: 5,
+		q: s[1],
+		format: "json"
+	}).done(function (data) {
+		document.getElementById('output').innerHTML += "<b>"+s[0]+":</b><br>";
+		$.each(data.responseData.feed.entries, function( i, news ) {
+		var d = new Date(Date.parse(news.publishedDate));
+		document.getElementById('output').innerHTML += ("0"+d.getHours()).slice(-2)+":"+("0"+d.getMinutes()).slice(-2)+" <a href='"+news.link+"' target='_blank'>"+news.title+"</a><br>";
+		})
+		document.getElementById('output').innerHTML += "<br>";
+	});
+})
 
 </script>
 
