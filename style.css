@@ -14,6 +14,10 @@ body {
   font-style: normal;
 }
 
+#time {
+  text-align: right;
+}
+
 #wrapper {
 	position: relative;
 	top:0;
