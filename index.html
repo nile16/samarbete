@@ -12,6 +12,8 @@
 
 
 <body>
+	<img src="Logomakr_2w8IXq.png" alt="Logo" style="width:838px;height:159px;">
+
   <nav class="navbar">
    <a href="index.html">Nyheter i världen</a>
    <a href="teknik.html">Nyheter inom teknik</a>
@@ -29,7 +31,7 @@
 
 $.getJSON("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?", {
     num: 5,
-    q: "http://www.sweclockers.com/feeds/nyheter",
+    q: "http://www.svd.se/?service=rss",
 	format: "json"
 }).done(function (data) {
 	$.each(data.responseData.feed.entries, function( i, news ) {
