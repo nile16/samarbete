@@ -26,12 +26,32 @@
 
 <script>
 $.getJSON("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?", {
-    num: 15,
+    num: 5,
     q: "http://www.sweclockers.com/feeds/nyheter",
 	format: "json"
 }).done(function (data) {
 	$.each(data.responseData.feed.entries, function( i, news ) {
 	document.getElementById('output').innerHTML += "Sweclockers: <a href='"+news.link+"'>"+news.title+"</a><br>";
+	})
+});
+
+$.getJSON("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?", {
+    num: 5,
+    q: "http://www.nyteknik.se/nt-rss.xml",
+	format: "json"
+}).done(function (data) {
+	$.each(data.responseData.feed.entries, function( i, news ) {
+	document.getElementById('output').innerHTML += "NyTeknik: <a href='"+news.link+"'>"+news.title+"</a><br>";
+	})
+});
+
+$.getJSON("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?", {
+    num: 5,
+    q: "http://www.swedroid.se/feed/",
+	format: "json"
+}).done(function (data) {
+	$.each(data.responseData.feed.entries, function( i, news ) {
+	document.getElementById('output').innerHTML += "Swedroid: <a href='"+news.link+"'>"+news.title+"</a><br>";
 	})
 });
 
