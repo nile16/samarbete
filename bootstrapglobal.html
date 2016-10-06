@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <title>Ditt kompletta nyhetsflöde</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+</head>
+
+<style>
+.container-fluid {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.bg-1 {
+    background-color: #e5e5e5; /* LightGrey */
+    color: #fffff;
+}
+.bg-2 {
+  background-color: #ff6000; /* Orange */
+  color: #ffffff;
+}
+.bg-3 {
+  background-color: #ffffff; /* White */
+  color: #555555;
+}
+</style>
+
+<body>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <link rel="stylesheet" type="text/css" href="bootstrapstyle.css">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Temavecka 4</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="bootstrapglobal.html">Globalt</a></li>
+        <li><a href="bootstraptech.html">Teknik</a></li>
+        <li><a href="bootstrapgame.html">Spel</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div class="container-fluid bg-1 text-center">
+    <h1>Ditt kompletta nyhetsflöde</h1>
+    <img src="Logomakr_4EYccf.png" alt="Logo">
+    <h4>Alla nyheter samlade på ett och samma ställe</h4>
+    <p id="time"></p>
+
+<script>
+
+	var d = new Date();
+					document.getElementById("time").innerHTML = d.toDateString();
+</script>
+  </div>
+
+  <div class="container-fluid bg-2 text-center">
+    <h1>Globala nyheter</h1>
+    <p><h4>Vad pågår i världen just nu?</h4></p>
+  </div>
+
+
+    <div class="container-fluid bg-3 text-center">
+      <h3>Nyhetsflöde</h3>
+      <p>Här ska det vara ett RSS flöde</p>
+    </div>
+
+
+
+</html>

@@ -15,11 +15,27 @@ body {
   font-style: normal;
 }
 
+/*#page {
+  margin: 0px auto;
+  padding: 10px;
+>>>>>>> a9bf8f5b6d92532704a7e5c94450ae053730fc15
+  width: 850px;
+  height: auto;
+  background-color: #FBF1F1;
+  border-radius: 8px;
+  font-family: serif;
+  font-style: normal;
+}*/
+
 #time  {
   text-align: right;
   padding-right: 20px;
   padding-top: 10px;
 }
+
+/*img {
+	width:100%;
+}*/
 
 #wrapper {
 	position: relative;
@@ -49,10 +65,16 @@ body {
  }
 
 .navbar {
+/*<<<<<<< HEAD*/
   background-color:#d5d5d5;
   padding-top: 10px;
   padding-bottom: 10px;
 	width: 100%;
+/*=======*/
+  background-color:#d4d4d4;
+	width: 100%;
+	margin: auto;
+/*>>>>>>> a9bf8f5b6d92532704a7e5c94450ae053730fc15*/
 	text-align: center;
 	/* height: 30px; */
 }
@@ -64,9 +86,15 @@ body {
   color: black;
 }
 
-@media (max-width:700px){
+#output {
+  width:100%;
+  height:100%;
+}
 
-body {
+
+@media (max-width:850px){
+
+#page {
   width: 100%;
   /* border-radius: 0px; */ /* Död kod */
   /* margin:0px; */
@@ -75,13 +103,7 @@ body {
 
 
 #output {
-  width:100%;
-  height:100%;
   font-size:2.5vw;
-}
-
-.navbar {
-  width: 100%;
 }
 
 .navbar a {
@@ -91,7 +113,8 @@ body {
 
 h1 {
   font-size: 5vw;
-  text-align: right;
 }
-
+#world {
+  text-align: center;
+}
 }
