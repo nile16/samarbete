@@ -5,52 +5,56 @@ html {
 
 body {
   margin: 10px auto;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   width: 850px;
   height: auto;
   background-color: #FBF1F1;
-  border-radius: 10px;
+  border-radius: 8px;
   font-family: serif;
   font-style: normal;
 }
 
-#time {
+#time  {
   text-align: right;
+  padding-right: 20px;
+  padding-top: 10px;
 }
 
 #wrapper {
 	position: relative;
-	top:0;
-	bottom:0;
-	right:0;
-	left:0;
+	/*top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0; */
 	overflow:hidden;
 }
 
 #teknik {
  	position: relative;
- 	top:0;
- 	bottom:0;
- 	right:0;
- 	left:0;
+ /*	top: 0;
+ 	bottom: 0;
+ 	right: 0;
+ 	left: 0; */
  	overflow:hidden;
 }
 
 #game {
  	position: relative;
- 	top:0;
- 	bottom:0;
- 	right:0;
- 	left:0;
+ 	/* top: 0;
+ 	bottom: 0;
+ 	right: 0;
+ 	left: 0; */
  	overflow:hidden;
  }
 
 .navbar {
-  background-color:#FBF1F1;
-	width: 680px;
-	margin: auto;
+  background-color:#d5d5d5;
+  padding-top: 10px;
+  padding-bottom: 10px;
+	width: 100%;
 	text-align: center;
-	height: 30px;
+	/* height: 30px; */
 }
 
 .navbar a {
@@ -64,8 +68,8 @@ body {
 
 body {
   width: 100%;
-  border-radius: 0px;
-  margin:0px;
+  /* border-radius: 0px; */ /* Död kod */
+  /* margin:0px; */
   height:100%;
 }
 

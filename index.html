@@ -14,7 +14,15 @@
 
 <p id="time"></p>
 
+<script>
+
+	var d = new Date();
+					document.getElementById("time").innerHTML = d.toDateString();
+</script>
+
 <img src="Logomakr_2w8IXq.png" alt="Logo" style="width:838px;height:159px;">
+
+<br><br>
 
 <nav class="navbar">
 	<a href='javascript:load(world,"Nyheter från hela världen");'>Globala nyheter</a>
@@ -28,13 +36,8 @@
 	<div id="output" ></div>
 </div>
 
-</body>
 
 <script>
-
-var d = new Date();
-document.getElementById("time").innerHTML = d.toDateString();
-
 
 var world = [
 	["SVD"        ,"http://www.svd.se/?service=rss"],
@@ -78,5 +81,5 @@ load(world,"Nyheter från hela världen");
 
 
 </script>
-
+</body>
 </html>
